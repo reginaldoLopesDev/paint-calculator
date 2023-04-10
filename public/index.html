@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Pintura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora de Pintura</h1>
+      <form id="myForm" action="/submit" method="POST">
+        <div class="walls">
+          <div class="wall-card">
+            <h2>Parede 1</h2>
+            <div class="form-field">
+              <label for="wall1Height">Altura:</label>
+              <input type="number" step=".1" id="wall1Height" name="wall1Height" required>
+              <span class="unit">m</span>
+            </div>
+            <div class="form-field">
+              <label for="wall1Width">Largura:</label>
+              <input type="number" step=".1" id="wall1Width" name="wall1Width" required>
+              <span class="unit">m</span>
+            </div>
+            <div class="wall-features">
+              <div class="form-field">
+                <label for="wall1Windows">Janelas:</label>
+                <input type="number" id="wall1Windows" name="wall1Windows" value="0">
+              </div>
+              <div class="form-field">
+                <label for="wall1Doors">Portas:</label>
+                <input type="number" id="wall1Doors" name="wall1Doors" value="0">
+              </div>
+            </div>
+          </div>
+          <div class="wall-card">
+            <h2>Parede 2</h2>
+            <div class="form-field">
+              <label for="wall2Height">Altura:</label>
+              <input type="number" step=".1" id="wall2Height" name="wall2Height" required>
+              <span class="unit">m</span>
+            </div>
+            <div class="form-field">
+              <label for="wall2Width">Largura:</label>
+              <input type="number" step=".1" id="wall2Width" name="wall2Width" required>
+              <span class="unit">m</span>
+            </div>
+            <div class="wall-features">
+              <div class="form-field">
+                <label for="wall2Windows">Janelas:</label>
+                <input type="number" id="wall2Windows" name="wall2Windows" value="0">
+              </div>
+              <div class="form-field">
+                <label for="wall2Doors">Portas:</label>
+                <input type="number" id="wall2Doors" name="wall2Doors" value="0">
+              </div>
+            </div>
+          </div>
+          <div class="wall-card">
+            <h2>Parede 3</h2>
+            <div class="form-field">
+              <label for="wall3Height">Altura:</label>
+              <input type="number" step=".1" id="wall3Height" name="wall3Height" required>
+              <span class="unit">m</span>
+            </div>
+            <div class="form-field">
+              <label for="wall3Width">Largura:</label>
+              <input type="number" step=".1" id="wall3Width" name="wall3Width" required>
+              <span class="unit">m</span>
+            </div>
+            <div class="wall-features">
+              <div class="form-field">
+                <label for="wall3Windows">Janelas:</label>
+                <input type="number" id="wall3Windows" name="wall3Windows" value="0">
+              </div>
+              <div class="form-field">
+                <label for="wall3Doors">Portas:</label>
+                <input type="number" id="wall3Doors" name="wall3Doors" value="0">
+              </div>
+            </div>
+          </div>
+          <div class="wall-card">
+            <h2>Parede 4</h2>
+            <div class="form-field">
+              <label for="wall4Height">Altura:</label>
+              <input type="number" step=".1" id="wall4Height" name="wall4Height" required>
+              <span class="unit">m</span>
+            </div>
+            <div class="form-field">
+              <label for="wall4Width">Largura:</label>
+              <input type="number" step=".1" id="wall4Width" name="wall4Width" required>
+              <span class="unit">m</span>
+            </div>
+            <div class="wall-features">
+              <div class="form-field">
+                <label for="wall4Windows">Janelas:</label>
+                <input type="number" id="wall4Windows" name="wall4Windows" value="0">
+              </div>
+              <div class="form-field">
+                <label for="wall4Doors">Portas:</label>
+                <input type="number" id="wall4Doors" name="wall4Doors" value="0">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit">Calcular</button>
+      </form>
+    </div>
+  </body>
+</html>
