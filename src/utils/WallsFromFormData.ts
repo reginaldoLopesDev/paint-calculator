@@ -1,4 +1,4 @@
-import { Wall } from '../Wall';
+import { Wall } from "../entities/Wall";
 
 export function createWallsFromFormData(formData: any): Wall[] {
   const walls: Wall[] = [];

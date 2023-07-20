@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "ts-node src/index.ts",
-    "dev": "nodemon ./src/index.ts"
+    "dev": "nodemon ./src/index.ts",
+    "test": "jest"
   },
   "devDependencies": {
     "@tsconfig/node12": "^1.0.11",

@@ -1,20 +1,20 @@
-import express from 'express';
-import { createWallsFromFormData } from './utils/WallsFromFormData';
-import { PaintCalculator } from './PaintCalculator';
-import Room from './Room';
+import express from "express";
+import { createWallsFromFormData } from "./utils/WallsFromFormData";
+import { PaintCalculator } from "./useCases/PaintCalculator";
+import Room from "./entities/Room";
 
 export const routes = express.Router();
 
-routes.get('/', (req, res) => {
-  res.render('index');
+routes.get("/", (req, res) => {
+  res.render("index");
 });
 
-routes.post('/submit', (req, res) => {
+routes.post("/submit", (req, res) => {
   try {
     const data = req.body;
     const walls = createWallsFromFormData(data);
     if (!walls) {
-      return res.status(400).json({ message: 'Invalid input' });
+      return res.status(400).json({ message: "Invalid input" });
     }
     const room = new Room(walls);
     const paintCalculator = new PaintCalculator();
@@ -22,12 +22,13 @@ routes.post('/submit', (req, res) => {
     const paintCans = paintCalculator.calculatePaintCans(paintLiters);
     return res
       .status(200)
-      .json({paintableTotalArea: room.getPaintableTotalArea(),
-  paintLiters: paintLiters,
-  paintCans: paintCans}
-      );
+      .json({
+        paintableTotalArea: room.getPaintableTotalArea(),
+        paintLiters: paintLiters,
+        paintCans: paintCans,
+      });
   } catch (err) {
     console.error(err);
-    return res.status(500).json({ message: 'Internal server error' });
+    return res.status(500).json({ message: "Internal server error" });
   }
 });
